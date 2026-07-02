@@ -651,6 +651,7 @@ footer img{
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  z-index: 1;
   left: 0;
   width: 100%;
   height: 80px;
@@ -659,6 +660,7 @@ footer img{
 
 .divider-bottom {
   height: 80px;
+  z-index: 1;
   background-image: url("assets/tornpaper1.png");
   background-size: cover;
   background-repeat: no-repeat;
