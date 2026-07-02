@@ -696,3 +696,190 @@ footer img{
   }
 
 }
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 900px){
+
+  section{
+    padding:60px 7%;
+  }
+
+  /* NAV */
+
+  .navbar{
+    justify-content:center;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .logo{
+    height:55px;
+  }
+
+  /* HERO */
+
+  .hero{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+    min-height:auto;
+    padding-top:30px;
+    margin-bottom:-80px;
+  }
+
+  .hero-text{
+    padding-top:0;
+  }
+
+  .hero h1{
+    font-size:3rem;
+  }
+
+  .hero h2{
+    font-size:1.3rem;
+  }
+
+  .hero p{
+    margin:auto;
+    font-size:1rem;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .hero-image img{
+    width:100%;
+    max-width:420px;
+    margin:auto;
+    display:block;
+  }
+
+  /* ABOUT */
+
+  .about{
+    grid-template-columns:1fr;
+    gap:50px;
+    text-align:center;
+    padding-bottom:100px !important;
+  }
+
+  .about-features{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .feature{
+    border:none;
+    padding:0;
+  }
+
+  /* SCHEDULE */
+
+  .schedule{
+    margin-top:0;
+  }
+
+  .schedule h2{
+    position:static;
+    margin:0 0 40px;
+    text-align:center;
+    font-size:2.5rem;
+  }
+
+    .schedule-container{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .schedule-collage{
+    order:2;
+    position:static;
+    margin-bottom: -80px;
+    margin-left: -40px;
+  }
+
+  .schedule-collage img{
+    width:100%;
+    height:auto;
+    margin:0;
+  }
+
+  .timeline td{
+    padding:16px 0;
+    font-size:.95rem;
+  }
+
+  .timeline-item td:last-child{
+    text-align:left;
+    padding-left:20px;
+  }
+
+  /* APPS */
+
+  .roles{
+    flex-direction:column;
+    gap:30px;
+  }
+
+  .role-card{
+    max-width:100%;
+    padding:35px 25px;
+  }
+
+  /* MODS */
+
+  .mods-grid{
+    flex-direction:column;
+    align-items:center;
+    gap:50px;
+  }
+
+  .mod-card{
+    width:90%;
+    max-width:300px;
+  }
+
+  /* FAQ */
+
+  .faq h2{
+    text-align:center;
+  }
+
+details{
+    background-size: 100% 60px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+  summary{
+    text-align:center;
+  }
+
+  /* FOOTER */
+
+  footer{
+    padding:60px 20px;
+  }
+
+  /* DIVIDERS */
+
+  .divider-bottom{
+     position: relative;
+    transform: translateY(-32px);
+    z-index:10;
+  }
+
+  .divider-top {
+    position: relative;
+    transform: translateY(48px);
+    z-index:10;
+  }
+
+}
