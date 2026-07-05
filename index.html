@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart of Shigure: a Tashigi Zine</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="cursor"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const isTouch = window.matchMedia("(pointer: coarse)").matches;
+
+  if (!isTouch) {
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+
+    const interactives = document.querySelectorAll("a, button, input, textarea");
+
+    interactives.forEach(el => {
+      el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
+      el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+    });
+  }
+
+  const sections = document.querySelectorAll(
+    ".hero, .about, .schedule, .apps, .mods, .faq"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  sections.forEach(section => observer.observe(section));
+});
+</script>
+<header>
+
+  <nav class="navbar">
+
+    <img src="assets\tashigizinelogo.png" class="logo">
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#apps">Apps & Guidelines</a>
+      <a href="#mods">Mods</a>
+      <a href="#faq">FAQ</a>
+      <a href="#apps" class="button small">I want to join</a>
+    </div>
+
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-text">
+
+    <span class="eyebrow">
+      A Tashigi Fanzine
+    </span>
+
+    <h1>
+      Heart of Shigure
+    </h1>
+
+    <h2>
+      The best swords are more than just creations for combat They're pieces of art. History. Each one has a story. A personality. A purpose.
+    </h2>
+      Join us in this project celebrating the heart and soul of the Navy: our beloved, kind, strong, and super cute Captain Tashigi!
+
+
+    <div class="hero-buttons">
+      <a href="#apps" class="button">
+        I want to join!
+      </a>
+
+      <a href="#about" class="buttonsecondary">
+        Learn More
+      </a>
+    </div>
+
+  </div>
+
+  <div class="hero-image">
+
+    <img src="assets/collagehero.png">
+
+  </div>
+
+</section>
+
+
+<div class="divider-top"></div>
+
+
+<section id="about" class="about">
+
+    <div class="about-left">
+
+        <h2>About</h2>
+
+        <p>
+            Heart of Shigure is a fan-made zine in celebration of Captain Tashigi and all the people who love her.
+            <br>
+            <br>
+            Through art, writing, cosplay and merchandise, we hope to bring to life a project that showcases her many adventures, relationships and unforgettable moments while bringing the community together.
+        </p>
+
+        <a href="#apps" class="button">
+            I want to join!
+        </a>
+
+    </div>
+
+    <div class="about-features">
+
+        <article class="feature">
+            <img src="assets/icon_fortashigi.png">
+            <h3>All Tashigi</h3>
+            <p>
+            This zine is all about Captain Tashigi, our favorite marine swordswoman! We want to have pieces of her with her most important people, doing cool sword stuff, experiencing the horrors, being nerdy, and more. All Tashigi, all the time!</p>
+        </article>
+
+        <article class="feature">
+            <img src="assets/icon_thankscontributors.png">
+            <h3>For fans, by fans</h3>
+            <p>
+            This project will be brought to life thanks to the help of our wonderful contributors. We will be opening apps in September, so if you happen to be (or know) an artist, writer or cosplayer, this project is for you.</p>
+        </article>
+
+        <article class="feature">
+            <img src="assets/icon_howwedoit.png">
+            <h3>How we do it</h3>
+            <p>
+            For profit, or non-profit? The final format will be decided after the Interest Check. Our goal is to make the project accessible while ensuring the best possible experience for everyone involved. Stay tuned for future updates!</p>
+        </article>
+
+    </div>
+
+</section>
+
+<div class="divider-bottom"></div>
+
+<section id="schedule" class="schedule">
+
+  <h2>Schedule</h2>
+
+  <div class="schedule-container">
+
+    <div class="schedule-collage">
+        <img src="assets/schedulegraphic.png" alt="">
+    </div>
+
+      <table class="timeline">
+
+  <tr class="timeline-item">
+    <td><span>01</span></td>
+    <td>Layout Mod Applications</td>
+    <td>August 3 - August 17</td>
+  </tr>
+
+  <tr class="timeline-item">
+    <td><span>02</span></td>
+    <td>Interest Check</td>
+    <td>August 3 - August 24</td>
+  </tr>
+
+  <tr class="timeline-item">
+    <td><span>03</span></td>
+    <td>Contributor Applications</td>
+    <td>September 6 - September 27</td>
+  </tr>
+
+  <tr class="timeline-item">
+    <td><span>04</span></td>
+    <td>Creation Period</td>
+    <td>October - February</td>
+  </tr>
+
+  <tr class="timeline-item">
+    <td><span>05</span></td>
+    <td>Production and Formatting</td>
+    <td>TBA</td>
+  </tr>
+
+  <tr class="timeline-item">
+    <td><span>06</span></td>
+    <td>Release Date</td>
+    <td>TBA</td>
+  </tr>
+
+</table>
+
+    </div>
+
+</section>
+
+
+<div class="divider-bottom"></div>
+
+
+<section id="apps" class="apps">
+
+  <h2>Applications & Guidelines</h2>
+
+    <a href="#" class="button" hidden>
+    View complete guidelines
+  </a>
+
+  <div class="roles">
+
+    <div class="role-card">
+      <img src="assets/artisticon.png">
+      <h3>Artist</h3>
+      <p>Artists will be expected to create one size A5 portrait artwork, or a size A4 spread. We will be looking at anatomy, backgrounds, piece composition, and coloring in your portfolios. One Piece pieces are encouraged but not mandatory.</p>
+    </div>
+
+    <div class="role-card">
+      <img src="assets/merchicon.png">
+      <h3>Merch Artist</h3>
+      <p>We are looking for merch artists to create a variety of merch! The results of the interest check  will determine if the merch will be digital or physical. We would love to see merch mock-ups in your portfolio. While we would prefer to see One Piece examples, it is not mandatory.</p>
+    </div>
+
+    <div class="role-card">
+      <img src="assets/writericon.png">
+      <h3>Writer</h3>
+      <p>We are looking for writers! We encourage One Piece samples in your portfolio, but not mandatory. Writers will be expected to create a piece approximately 1500-2000 words in length. We will be looking for proper grammar, characterization, and story cohesion in your samples. Samples must NOT exceed 1500 words in length.</p>
+    </div>
+
+    <div class="role-card">
+      <img src="assets/cosplayicon.png">
+      <h3>Cosplayer</h3>
+      <p>Cosplayers are expected to submit one photo preferably from a photoshoot for the zine. One Piece cosplays are encouraged but not mandatory.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="divider-top"></div>
+
+
+<section class="mods" id="mods">
+
+    <h2>Meet the Mods</h2>
+
+    <p class="section-text">
+        We're a team of One Piece and Tashigi fans working together to bring <i>Heart of Shigure: a Tashigi Zine</i> to life. Hover or click over each polaroid to learn a little more about the people behind the project.
+    </p>
+
+    <div class="mods-grid">
+
+        <article class="mod-card">
+
+            <div class="polaroid">
+
+                <img src="assets/mods/peu.jpg" alt="Graphics Mod">
+
+                <div class="overlay">
+                    <h4>Hello, I am Peu!</h4>
+                    <p>
+                        I do graphic design and web dev for a living, and I love staying up late drawing even before workdays.
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>Peu</h3>
+            <span>Graphics & Head Mod</span>
+
+        </article>
+
+        <article class="mod-card">
+
+            <div class="polaroid">
+
+                <img src="assets/mods/Hamstercheese7.png" alt="Writing Mod">
+
+                <div class="overlay">
+                    <h4>Heyo, I'm Ham!</h4>
+                    <p>
+                        Tashigi is BEST GIRL and OP Marines are my fixation of the last decade.
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>hamstercheese7</h3>
+            <span>Co-Head and Writing Mod</span>
+
+        </article>
+
+        <article class="mod-card">
+
+            <div class="polaroid">
+
+                <img src="assets/mods/RiverLoche_icon.png" alt="Art Mod">
+
+                <div class="overlay">
+                    <h4>Hi, I am RiverLoche!</h4>
+                    <p>
+                        Caffeine fueled gremlin who loves art, video games, anime, and books.
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>River</h3>
+            <span>Art Mod</span>
+
+        </article>
+
+        <article class="mod-card">
+
+            <div class="polaroid">
+
+                <img src="assets/mods/Mandy_icon.jpg" alt="Socials Mod">
+
+                <div class="overlay">
+                    <h4>Hi, I am Mandy</h4>
+                    <p>
+                        The One Piece (brainrot) is real! I love writing and creating delicious OP inspired-recipes! 
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>Mandy</h3>
+            <span>Social Media Mod</span>
+
+        </article>
+
+        <article class="mod-card">
+
+            <div class="polaroid">
+
+                <img src="assets/mods/yam_icon.jpg" alt="Socials Mod Intern">
+
+                <div class="overlay">
+                    <h4>Hi, I am Yam!</h4>
+                    <p>
+                        Part-time artist, full-time brainrotter 🗣️
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>yammfries</h3>
+            <span>Social Media Intern</span>
+
+        </article>
+
+        <article class="mod-card">
+
+            <div class="polaroid">
+
+                <img src="assets/mods/layoutmod.png" alt="Layout Mod">
+
+                <div class="overlay">
+                    <h4>Layout Mod</h4>
+                    <p>
+                        Interested in being our Layout Mod? Then please look forward to our Layout Mod applications!
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>TBA</h3>
+            <span>Layout Mod</span>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<div class="divider-bottom"></div>
+
+
+<section id="faq" class="faq">
+
+  <h2>FAQ</h2>
+
+  <details>
+    <summary>What is a fanzine?</summary>
+    <p>A fanzine, or zine, is an art project focused on a theme made by a team of people (usually fans!). It normally includes fanart, fanfic, merch, and more!</p>
+  </details>
+
+  <details>
+    <summary>What's this zine about?</summary>
+    <p>This zine is all about Captain Tashigi, our favorite marine swordswoman! We want to have pieces of her with her friends (and/or lovers), doing cool sword stuff, experiencing the horrors, being nerdy, etc. All Tashigi, all the time~</p>
+  </details>
+
+  <details>
+    <summary>Is this for charity or for profit?</summary>
+    <p>This will be determined by the Interest Check!</p>
+  </details>
+
+    <details>
+    <summary>Is shipping allowed?</summary>
+    <p>Shipping will be allowed, and we aim to have it cover roughly a 30% of the content in the zine. All ships are welcome. We love LOVE!</p>
+  </details>
+
+  <details>
+    <summary>Is NSFW allowed?</summary>
+    <p>This will be determined by the Interest Check!</p>
+  </details>
+
+  <details>
+    <summary>Is AI allowed?</summary>
+    <p>NO. No AI will be allowed in the creation of ANY part of this project.</p>
+  </details>
+
+
+
+</section>
+
+
+<footer>
+
+  <img src="assets\tashigizinelogo.png">
+
+  <p>
+    © 2026 Heart of Shigure
+  </p>
+
+</footer>
+
+</body>
+</html>
