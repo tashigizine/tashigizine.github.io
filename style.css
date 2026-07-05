@@ -884,4 +884,13 @@ details{
     z-index:10;
   }
 
+  @media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+
+  .cursor {
+    display: none;
+  }
+}
 }
