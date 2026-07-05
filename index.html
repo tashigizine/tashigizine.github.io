@@ -20,6 +20,11 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
+  if (window.matchMedia("(pointer: coarse)").matches) {
+    return;
+  }
+
   const cursor = document.querySelector(".cursor");
 
   document.addEventListener("mousemove", (e) => {
